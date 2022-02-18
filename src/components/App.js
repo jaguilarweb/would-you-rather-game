@@ -4,6 +4,7 @@ import { handleInitialData } from '../actions/shared';
 /* import sara from '../images/sarah.png'; */
 import '../index.css';
 import Nav from './Nav';
+import Dashboard from './Dashboard';
 
 class App extends Component {
   componentDidMount(){
@@ -13,9 +14,19 @@ class App extends Component {
     return (
       <div >
         <Nav />
+        {this.props.loading === true
+          ? null
+          : <Dashboard />}
       </div>
     );
   }
 }
+
+function mapStateToProps({authedUser}){
+  return {
+    loading: authedUser === null
+  }
+}
+
 
 export default connect()(App);

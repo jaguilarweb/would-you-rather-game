@@ -4,7 +4,7 @@ import { receiveQuestions } from '../actions/questions'
 import { setAuthedUser } from '../actions/authedUser'
 
 //TODO: Create auth
-const AUTHED_ID = 'jaguilarweb'
+const AUTHED_ID = 'sarahedo'
 
 export function handleInitialData () {
   return (dispatch) => {
