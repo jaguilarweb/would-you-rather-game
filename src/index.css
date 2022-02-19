@@ -9,6 +9,17 @@ a {
   text-decoration: none;
   color: #252525;
 }
+h2 {
+  color: rgb(199, 82, 209);
+}
+button {
+  background-color: rgb(199, 82, 209);
+  color: #fff;
+  border:rgb(199, 82, 209);
+  border-radius: 5px;
+  height: 25px;
+  width: 70%;
+}
 
 .container {
   max-width: 1000px;
@@ -19,6 +30,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
 
 .nav ul {
   display: flex;
@@ -37,8 +50,30 @@ li {
   text-decoration: none;
 }
 
+.question {
+  width: 410px;
+  border: 1px solid rgb(199, 82, 209);
+  border-radius: 0 0 15px 15px;
+  display: flex;
+}
+.author{
+  padding: 0 0 0 10px;
+  width: 400px;
+  border: 1px solid rgb(199, 82, 209);
+  border-radius: 15px 15px 0 0;
+}
+
 .avatar {
-  height: 40px;
+  margin: 5px;
+}
+
+img {
+  width: 70px;
+  border: 2px solid rgb(199, 82, 209);;
   border-radius: 25px;
-  margin: 10px;
+}
+
+.answerd {
+  padding: 5px;
+  text-align: center;
 }
