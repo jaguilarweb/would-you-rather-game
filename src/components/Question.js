@@ -1,30 +1,27 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
-import sara from '../images/sarah.png';
+
 
 class Question extends Component {
   render(){
-    const {question} = this.props
+    const {question, user} = this.props
     const {
       id, timestamp, author, optionOne, optionTwo 
     } = question
-
-
+    
     return(
 
       <Fragment >
-        <div className="author">{author}</div>
+        <div className="author"><strong>{author}</strong></div>
         <div className='question'>
         <div className='avatar'>
-          {/** Reemplazar el src fijo */}
-          <img src={sara} />
-
+          <img src={ user.avatarURL } />
         </div>
         <div className='answerd'>
           <h2>Would you rather...?</h2>
           <p>{optionOne.text}</p>
           <p>{optionTwo.text}</p>
-          <button>Submit</button>
+          <button>View Pull</button>
         </div>
         </div>
       </Fragment>
@@ -36,11 +33,12 @@ class Question extends Component {
 //from our redux store
 function mapStateToProps({authedUser, users, questions}, {id}){
   const question = questions[id]
+  const user = users[question.author]
 
   return{
     authedUser,
     question,
-
+    user,
   }
 }
 

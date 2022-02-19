@@ -57,7 +57,8 @@ li {
   display: flex;
 }
 .author{
-  padding: 0 0 0 10px;
+  padding: 5px 0 0 10px;
+  height: 30px;
   width: 400px;
   border: 1px solid rgb(199, 82, 209);
   border-radius: 15px 15px 0 0;
